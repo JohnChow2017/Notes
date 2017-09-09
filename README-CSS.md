@@ -1,4 +1,4 @@
-## NOTES-CSS
+## NOTES--HTML\CSS
 
 ### 文本设置
 
@@ -55,5 +55,6 @@ word-spacing 单词间距（以空格为解析单位）<br>
 ```css
 #box1,#box2{width:100px; height:100px; background:#red}
 ```
-
+### a的四个伪类
+>>伪类：元素在特定情况下才具备的
 
