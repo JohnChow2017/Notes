@@ -23,14 +23,15 @@ word-spacing 单词间距（以空格为解析单位）<br>
 
 ### 图片
 
-a. 
 ```html
 <img src='1.png' alt='如果无法显示图像，浏览器将显示替代文本' />
 ```
 
 ### a标签
 
-a.
 ```html
-<a href='www.baidu.com' target='_blank'></a>
+<a href='www.baidu.com' target='_blank'>在新窗口中打开被链接文档。</a>
 ```
+```html
+<base target='_blank' />
+```(在head中)将定义页面中所有连接的打开方式
