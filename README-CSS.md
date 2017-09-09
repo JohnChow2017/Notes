@@ -33,5 +33,5 @@ word-spacing 单词间距（以空格为解析单位）<br>
 <a href='www.baidu.com' target='_blank'>在新窗口中打开被链接文档。</a>
 ```
 ```html
-<base target='_blank' />
-```(在head中)将定义页面中所有连接的打开方式
+<base target='_blank' />   //(在head中)将定义页面中所有连接的打开方式
+```
