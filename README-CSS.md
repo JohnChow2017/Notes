@@ -23,12 +23,14 @@ word-spacing 单词间距（以空格为解析单位）<br>
 
 ### 图片
 
-a. ```html
+a. 
+```html
 <img src='1.png' alt='如果无法显示图像，浏览器将显示替代文本' />
 ```
 
 ### a标签
 
-a. ```html
+a.
+```html
 <a href='www.baidu.com' target='_blank'></a>
 ```
