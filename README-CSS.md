@@ -1,7 +1,7 @@
-## NOTES
-####css
+## NOTES-CSS
 
-常见样式--文本设置<br>
+#文本设置
+常见样式<br>
 font-size<br>
 font-family<br>
 color( 英文\RGB\十六进制 )<br>
@@ -14,4 +14,4 @@ text-decoration 文本修饰 underline,line-through<br>
 letter-spacing 字母间距<br>
 word-spacing 单词间距（以空格为解析单位）<br>
 
-font：font-style | font-weight | font-size/line-height | font-family 顺序<br>
+font：font-style | font-weight | font-size/line-height | font-family 依此顺序<br>
