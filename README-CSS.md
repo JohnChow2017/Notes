@@ -37,4 +37,19 @@ word-spacing 单词间距（以空格为解析单位）<br>
 <base target='_blank' />   //(在head中)将定义页面中所有连接的打开方式
 ```
 
+### span标签
+```html
+<span>建议使用span标签区分样式</span>
+```
+
+### 列表
+```html
+<dl>      //定义列表
+  <dt>定义列表标题</dt>
+  <dd>定义列表项</dd>
+</dl>
+```
+
+### 选择符
+
 
