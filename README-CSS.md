@@ -29,12 +29,12 @@ word-spacing 单词间距（以空格为解析单位）<br>
 
 ### a标签
 
-功能：链接、下载、锚点
+功能：链接、下载、锚点（a锚点：添加id属性）
 ```html
 <a href='www.baidu.com' target='_blank'>在新窗口中打开被链接文档。</a>
 ```
 ```html
 <base target='_blank' />   //(在head中)将定义页面中所有连接的打开方式
 ```
-a锚点：添加id属性
+
 
