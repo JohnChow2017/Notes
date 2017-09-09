@@ -2,8 +2,8 @@
 
 ### 文本设置
 
-常见样式：<br>
-font-size<br>
+>#### 常见样式：<br>
+>>font-size<br>
 font-family<br>
 font-weight 文字着重<br>
 font-style 文字倾斜 ltalic<br>
