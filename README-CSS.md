@@ -2,7 +2,7 @@
 
 ### 文本设置
 
-常见样式<br>
+常见样式：<br>
 font-size<br>
 font-family<br>
 color( 英文\RGB\十六进制 )<br>
@@ -15,4 +15,13 @@ text-decoration 文本修饰 underline,line-through<br>
 letter-spacing 字母间距<br>
 word-spacing 单词间距（以空格为解析单位）<br>
 
-font：font-style | font-weight | font-size/line-height | font-family 依此顺序<br>
+font：font-style | font-weight | font-size/line-height | font-family 符合样式需依此顺序<br>
+
+
+### 图片
+
+a. <img src='1.png' alt='如果无法显示图像，浏览器将显示替代文本' />
+
+### a标签
+
+a. <a href='www.baidu.com' target='_blank'></a>
