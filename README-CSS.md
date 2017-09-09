@@ -55,6 +55,12 @@ word-spacing 单词间距（以空格为解析单位）<br>
 ```css
 #box1,#box2{width:100px; height:100px; background:#red}
 ```
-### a的四个伪类
->>伪类：元素在特定情况下才具备的
+### a的四个伪类(a:hover)
+>伪类：元素在特定情况下才具备的
+>>link:未访问（默认）
+>>hover:鼠标悬停（鼠标滑过）
+>>active:链接激活（鼠标按下）
+>>visited:访问过后（点击过后）
+>a四个伪类的顺序
+link\visited\hover\active
 
