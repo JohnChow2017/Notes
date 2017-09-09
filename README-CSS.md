@@ -51,5 +51,9 @@ word-spacing 单词间距（以空格为解析单位）<br>
 ```
 
 ### 选择符
+群组选择符：
+```css
+#box1,#box2{width:100px; height:100px; background:#red}
+```
 
 
