@@ -60,7 +60,7 @@ word-spacing 单词间距（以空格为解析单位）<br>
 >>link:未访问（默认）
 >>hover:鼠标悬停（鼠标滑过）
 >>active:链接激活（鼠标按下）
->>visited:访问过后（点击过后）
+>>visited:访问过后（点击过后）<br>
 >a四个伪类的顺序<br>
 link\visited\hover\active
 
