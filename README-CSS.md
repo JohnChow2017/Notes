@@ -78,62 +78,34 @@ png24：支持透明，也支持半透明（图像中存在半透明效果的图
 
 * PSD测量注意事项 - 文字右方和下方会有1像素的默认间隙
 
-#代码初识
+### 代码初识
+html 超文本标记语言（结构）<br>
+CSS 层叠样式表（样式）<br>
+js javascript（行为）<br>
+文件编码格式与代码编码格式一致的时候，网页才不会出现乱码，才可以显示正常。<br>
 
-html 超文本标记语言（结构）
-CSS 层叠样式表（样式）
-js javascript（行为）
-文件编码格式与代码编码格式一致的时候，网页才不会出现乱码，才可以显示正常。
+GB2312 中文简体标准<br>
+utf-8 国际标准<br>
 
-GB2312 中文简体标准
-utf-8 国际标准
-样式的位置：
+* border
+solid dash dotted(IE6不支持)<br>
 
-行间样式
-内部样式
-外部样式表
-##background
+* padding
+padding-top/right/bottom/left<br>
+内边距相当于给一个盒子加了填充厚度，会影响盒子大小<br>
 
-bac kground: {
-    url(bg.jpg) center top no-repeat gray fixed;
-}
-等价于：
+* margin
+margin-top/right/bottom/left<br>
+上下外边距会叠压<br>
+父子级包含的时候，子级的margin top会传递给父级；（内边距替代外边距）<br>
+如果给一个盒子仅设置margin-left: auto，那么盒子会跑到最右边；如果设置margin-right: auto，那么盒子就会跑到最左边。同时设置margin-left和margin-right为auto，可以使盒子居中。<br>
 
-#bg {
-background-image: url(bg.jpg);
-background-position: center top;
-background-repeat: no-repeat;
-background-color: gray;
-background-attachment: fixed;
-}
-##border
+* 盒模型和结构样式
+盒子大小 = border + padding + width/height<br>
+盒子宽度 = 左border + 左padding + width + 右padding + 右border<br>
+盒子高度 = 上border + 上padding + height + 下padding + 下border<br>
 
-border-top/right/bottom/left
-solid dash dotted(IE6不支持)
-padding
-
-padding-top/right/bottom/left
-内边距相当于给一个盒子加了填充厚度，会影响盒子大小
-##margin
-
-margin-top/right/bottom/left
-上下外边距会叠压
-父子级包含的时候，子级的margin top会传递给父级；（内边距替代外边距）
-如果给一个盒子仅设置margin-left: auto，那么盒子会跑到最右边；如果设置margin-right: auto，那么盒子就会跑到最左边。同时设置margin-left和margin-right为auto，可以使盒子居中。
-##盒模型和结构样式
-
-盒子大小 = border + padding + width/height
-盒子宽度 = 左border + 左padding + width + 右padding + 右border
-盒子高度 = 上border + 上padding + height + 下padding + 下border
-常见样式——结构
-
-width 宽度
-height 宽度
-background 背景
-border 边框
-padding 内边距
-margin 外边距
-复合属性：一个属性多个属性值的命令
+复合属性：一个属性多个属性值的命令<br>
 
 ##常见文本设置
 
