@@ -45,134 +45,138 @@ margin-top/right/bottom/left<br>
 复合属性：一个属性多个属性值的命令<br>
 
 * 常见文本设置
-font: font-style	font-weight	font-size/line-height	font-family;
-font-size（一般为偶数，中文最小号12px）
-font-family（中文默认宋体、西文默认是arial，可用逗号分隔多种字体）
-color（英文、rgb、十六位进制色彩值）
-line-height（文字是在行高的上下居中）
-text-align
-text-indent（首行缩进，用em缩进字符）
-font-weight
-font-style
-text-decoration：underline、overline、line-through
-letter-spacing 字母间距
-word-spacing（以空格为解析单位）单词间距
+font: font-style	font-weight	font-size/line-height	font-family;<br>
+font-size（一般为偶数，中文最小号12px）<br>
+font-family（中文默认宋体、西文默认是arial，可用逗号分隔多种字体）<br>
+color（英文、rgb、十六位进制色彩值）<br>
+line-height（文字是在行高的上下居中）<br>
+text-align<br>
+text-indent（首行缩进，用em缩进字符）<br>
+font-weight<br>
+font-style<br>
+text-decoration：underline、overline、line-through<br>
+letter-spacing 字母间距<br>
+word-spacing（以空格为解析单位）单词间距<br>
 
 * img
-注意写img的alt属性
+注意写img的alt属性<br>
 把img放到一个块里面，默认img与该块的下边框有几个像素的间距。为了解决这个问题，可以为img添加样式display: block;但是这种解决方法有局限性。<br>
-另外一种方法是给图片添加vertical-align: top;也可以。
+另外一种方法是给图片添加vertical-align: top;也可以。<br>
 
 * a标签
-target=”_self”/”_blank”
-在head中添加如下代码，可以让页面中所有的链接都在新页面中打开，其中base代表默认
+target=”_self”/”_blank”<br>
+在head中添加如下代码，可以让页面中所有的链接都在新页面中打开，其中base代表默认<br>
 <base target="_blank"/> <br>
 
-a标签的作用:
-链接（a标签中放链接）
-下载（href的路径是文件路径）
-锚点（a的href中放的是id）
+a标签的作用:<br>
+链接（a标签中放链接）<br>
+下载（href的路径是文件路径）<br>
+锚点（a的href中放的是id）<br>
 
 
 * 常见标签和SEO浅析
+标题h标签<br>
+段落p标签<br>
+强调strong标签（粗体）<br>
+强调em标签（斜体）<br>
+span标签<br>
+有序列表ol标签<br>
+无序列表ul标签<br>
+列表项li<br>
+定义列表dl<br>
+定义列表标题dt<br>
+定义列表项dd<br>
+浅析SEO（搜索引擎优化）<br>
 
-标题h标签
-段落p标签
-强调strong标签（粗体）
-强调em标签（斜体）
-span标签
-有序列表ol标签
-无序列表ul标签
-列表项li
-定义列表dl
-定义列表标题dt
-定义列表项dd
-浅析SEO（搜索引擎优化）
+部分方法： 1. 页面标签语义化 2. 使用对SEO有利的标签：h1/h2/h3/strong/em… 3. 提高页面关键词密度 4. 其他<br>
 
-部分方法： 1. 页面标签语义化 2. 使用对SEO有利的标签：h1/h2/h3/strong/em… 3. 提高页面关键词密度 4. 其他
+SEM：搜索引擎营销；（包含SEO）<br>
 
-SEM：搜索引擎营销；（包含SEO）
+* 基础选择符
+id选择符 #<br>
+class选择符 .<br>
+类型选择符 p div a img等<br>
+群组选择符 用逗号,分隔<br>
+包含选择符 用空格分隔<br>
+通配符 *<br>
 
-##基础选择符
+* 选择符优先级
+同级样式默认后者覆盖前者<br>
+样式优先级<br>
+类型选择符（1）<br>
+class选择符（10）<br>
+id选择符（100）<br>
+style行间样式（1000）<br>
+js动态修改行间样式<br>
 
-id选择符 #
-class选择符 .
-类型选择符 p div a img等
-群组选择符 用逗号,分隔
-包含选择符 用空格分隔
-通配符 *
-##选择符优先级
+* a伪类
+link 未访问（默认）<br>
+hover 鼠标悬停（鼠标划过）<br>
+active 链接激活（鼠标按下）<br>
+visited 访问过后（点击过后）<br>
+注意书写顺序 a:link → a:visited → a:hover → a:active，--(love-hate)<br>
+这样在链接点击之后，a:hover和a:active的样式才不会被a:visited的样式覆盖，仍然起效。<br>
 
-同级样式默认后者覆盖前者
-样式优先级（级别问题，官大一级压死人；只看样式权重，与样式名称在html中的先后无关，只跟样式style中的先后顺序有关）
-类型选择符（1）
-class选择符（10）
-id选择符（100）
-style行间样式（1000）
-js动态修改行间样式
-##a伪类详解
+a伪类的应用：<br>
 
-link 未访问（默认）
-hover 鼠标悬停（鼠标划过）
-active 链接激活（鼠标按下）
-visited 访问过后（点击过后）
-注意上面四者的书写顺序 a:link → a:visited → a:hover → a:active，这样在链接点击之后，a:hover和a:active的样式才不会被a:visited的样式覆盖，仍然起效。
-a伪类的应用：
+四个伪类全用（搜索引擎、新闻门户、小说网站）<br>
+一般网站只用 a {} 和 a:hover {}<br>
 
-四个伪类全用（搜索引擎、新闻门户、小说网站）
-一般网站只用 a {} 和 a:hover {}
-a伪类的兼容
+a伪类的兼容:<br>
+IE6不支持a以外其他任何标签的伪类<br>
+IE6以上的浏览器支持标签的hover伪类<br>
 
-IE6不支持a以外其他任何标签的伪类
-IE6以上的浏览器支持标签的hover伪类
-##标签默认值样式重置
-
+* 标签默认值样式重置
+``html
 /* 默认样式重置（css reset） */
-body, p, h1, h2, h3, h4, h5, h6, dl, dd { margin: 0; font-size: 12px; /* font-family */ }
+body, div, p, h1, h2, h3, h4, h5, h6, dl, dd { margin: 0; font-size: 12px; /* font-family */ }
 ol, ul { list-style: none; padding: 0; margin: 0; }
 a { text-decoration: none; }
 img { border: none; }
-……
-##标签基本特性和转换
+``
+<br>
 
-内联、内嵌、行内属性标签 a、span、strong、em
-默认同行可以继续跟同类型标签
-内容撑开宽度
-不支持宽高
-不支持上下的margin和padding
-代码换行被解析（如果内联元素在代码中换行了，那么在页面中，就会体现为内联元素之间的空隙）
-块标签 p、div、h1~h6、ol、ul、dl
-默认独占一行显示
-没有宽度时，默认撑满一排
-支持所有css命令
-display: block; 显示为块
-display: inline; 显示为内嵌
-##inline-block的特性和应用
+* 标签基本特性和转换:
+1.内联、内嵌、行内属性标签： a、span、strong、em、img、input、select、textarea<br>
+默认同行可以继续跟同类型标签<br>
+内容撑开宽度<br>
+不支持宽高<br>
+不支持上下的margin和padding<br>
+代码换行被解析（如果内联元素在代码中换行了，那么在页面中，就会体现为内联元素之间的空隙）<br>
 
-特性：
+2.块标签 p、div、h1~h6、ol、ul、dl、form<br>
+默认独占一行显示<br>
+没有宽度时，默认撑满一排<br>
+支持所有css命令<br><br>
 
-块在一行显示
-行内属性标签支持宽高
-没有宽度的时候，内容撑开宽度
-问题：
+display: block; 显示为块<br>
+display: inline; 显示为内嵌<br>
 
-代码换行被解析（代码中inline-block换行写，在页面中inline-block元素之间会有空隙）
-IE6/7不支持块属性标签的inline-block
-关于代码换行解析（页面中内联元素和inline-block元素之间的空隙）：
+* inline-block的特性和应用
+特性：<br>
 
-空隙为一个空格的大小，也就是页面上默认字号的一半。比如页面上默认字号为12px，那么它们之间的空隙就是6px。
+块在一行显示<br>
+行内属性标签支持宽高<br>
+没有宽度的时候，内容撑开宽度<br>
+问题：<br>
 
-inline-block的应用：分页导航
+代码换行被解析（代码中inline-block换行写，在页面中inline-block元素之间会有空隙）<br>
+IE6/7不支持块属性标签的inline-block<br>
+
+关于代码换行解析（页面中内联元素和inline-block元素之间的空隙）：<br>
+空隙为一个空格的大小，也就是页面上默认字号的一半。比如页面上默认字号为12px，那么它们之间的空隙就是6px。<br>
+
+inline-block的应用：分页导航<br>
 
 分析结构（div包一排a）
-a标签支持宽高并在一排显示，因此要设置inline-block
-有hover效果
-当前页的页码上不能点
-cursor指针样式（规定要显示的光标的类型）
-cursor: pointer	text	move …
-cursor: url(hand.cur), pointer; 如果前面图片没引入进来，就用后面的pointer
-##前端规范
+a标签不支持宽高 并在一排显示，因此要设置inline-block<br>
+有hover效果<br>
+当前页的页码上不能点<br>
+cursor指针样式（规定要显示的光标的类型）<br>
+cursor: pointer	text	move …<br>
+cursor: url(hand.cur), pointer; 如果前面图片没引入进来，就用后面的pointer<br>
 
+* 前端规范
 所有标签的书写均为英文半角状态下的小写
 id, class必须以字母开头
 所有标签必须闭合
