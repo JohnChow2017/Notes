@@ -1,68 +1,5 @@
 ## NOTES--HTML\CSS
 
-### 文本设置
-
-#### 常见样式：<br>
->font-size<br>
-font-family<br>
-font-weight 文字着重<br>
-font-style 文字倾斜 ltalic<br>
-
->line-height<br>
-color( 英文\RGB\十六进制 )<br>
-
->text-align 文本对齐方式<br>
-text-indent 首行缩进（em缩进字符）<br>
-text-decoration 文本修饰 underline,line-through<br>
-
->letter-spacing 字母间距<br>
-word-spacing 单词间距（以空格为解析单位）<br>
-
->font：font-style | font-weight | font-size/line-height | font-family 符合样式需依此顺序<br>
-
-
-### 图片
-
-```html
-<img src='1.png' alt='如果无法显示图像，浏览器将显示替代文本' />
-```
-
-### a标签
-
-功能：链接、下载、锚点（a锚点：添加id属性）
-```html
-<a href='www.baidu.com' target='_blank'>在新窗口中打开被链接文档。</a>
-```
-```html
-<base target='_blank' />   //(在head中)将定义页面中所有连接的打开方式
-```
-
-### span标签
-```html
-<span>建议使用span标签区分样式</span>
-```
-
-### 列表
-```html
-<dl>      //定义列表
-  <dt>定义列表标题</dt>
-  <dd>定义列表项</dd>
-</dl>
-```
-
-### 选择符
-群组选择符：
-```css
-#box1,#box2{width:100px; height:100px; background:#red}
-```
-### a的四个伪类(a:hover)
->伪类：元素在特定情况下才具备的
->>link:未访问（默认）
->>hover:鼠标悬停（鼠标滑过）
->>active:链接激活（鼠标按下）
->>visited:访问过后（点击过后）<br>
->a四个伪类的顺序：
-link\visited\hover\active
 
 ### PS基础
 * 前端需要的PS技能:<br>
@@ -107,8 +44,7 @@ margin-top/right/bottom/left<br>
 
 复合属性：一个属性多个属性值的命令<br>
 
-##常见文本设置
-
+* 常见文本设置
 font: font-style	font-weight	font-size/line-height	font-family;
 font-size（一般为偶数，中文最小号12px）
 font-family（中文默认宋体、西文默认是arial，可用逗号分隔多种字体）
@@ -119,22 +55,26 @@ text-indent（首行缩进，用em缩进字符）
 font-weight
 font-style
 text-decoration：underline、overline、line-through
-letter-spacing
-word-spacing（以空格为解析单位）
-##img
+letter-spacing 字母间距
+word-spacing（以空格为解析单位）单词间距
 
+* img
 注意写img的alt属性
-把img放到一个块里面，默认img与该块的下边框有几个像素的间距。为了解决这个问题，可以为img添加样式display: block;但是这种解决方法有局限性。另外一种方法是给图片添加vertical-align: top;也可以。
-##a标签
+把img放到一个块里面，默认img与该块的下边框有几个像素的间距。为了解决这个问题，可以为img添加样式display: block;但是这种解决方法有局限性。<br>
+另外一种方法是给图片添加vertical-align: top;也可以。
 
+* a标签
 target=”_self”/”_blank”
 在head中添加如下代码，可以让页面中所有的链接都在新页面中打开，其中base代表默认
-<base target="_blank"/>
-a标签的作用
+<base target="_blank"/> <br>
+
+a标签的作用:
 链接（a标签中放链接）
 下载（href的路径是文件路径）
 锚点（a的href中放的是id）
-##常见标签和SEO浅析
+
+
+* 常见标签和SEO浅析
 
 标题h标签
 段落p标签
