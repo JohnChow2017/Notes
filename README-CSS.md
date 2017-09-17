@@ -211,6 +211,7 @@ clear控制元素的某个方向上不能有浮动元素<br>
 方法三、 用父级添加display: inline-block来清除浮动（问题：margin左右自动失效）<br>
 
 方法四、 在浮动元素下边加上<div class=”clear”></div>空标签清浮动（问题：IE6最小高度19px；解决后IE6下还有2px偏差）<br>
+<br>
 ```css
 .clear {
     height: 0px;
@@ -228,6 +229,7 @@ clear控制元素的某个方向上不能有浮动元素<br>
 
 方法五、在浮动元素下面加<br clear=”all” /> （问题：不符合W3C标准，样式混入了html）<br>
 方法六、给浮动元素的父级元素加上clear类，然后给该元素的after伪类设置如下样式（问题：IE6、7不支持after伪类，为了兼容IE6、7，还要给父级元素加上样式zoom:1）<br>
+<br>
 ```css
 .clear:after {
     content: "";
@@ -243,6 +245,8 @@ clear控制元素的某个方向上不能有浮动元素<br>
 当haslayout触发的时候，会根据元素内容大小或者父级的大小来重新计算元素的宽高。所以在IE6、7下，如果给浮动元素的父级加了宽高的话，那么触发了haslayout。该父级元素就根据其内容，及子元素来重新计算宽高，也就清除了浮动。如果父级元素没有加宽高的话，通过加zoom: 1;来触发haslayout，就可以解决问题了。也就是说，为了兼容IE6、7，除了给父级元素加上clear类，然后该给父级元素的after伪类添加上述样式之外，还要给该父级元素加上zoom: 1;的样式。也就是如下代码：<br>
 
 `最终推荐使用的清楚浮动的方法:`
+
+<br>
 
 ```css
 .clear { /*用来处理IE6、7*/
@@ -294,7 +298,7 @@ IE6、7 li中的元素都浮动。在IE6、7下li元素下方会产生4px间隙�
 作用二：用于清理图片下方的空隙。（将img放在块中，img下方会有几个像素的空隙。可以为img设置display: block;来清理，但是这种方法有局限性，因此推荐给img添加vertical-align: top;样式来清理。）<br>
 
 #### 定位
-
+<br>
 * 相对定位
 添加了position: relative;的元素就变成了定位元素，具有以下特性：<br>
 <br>
@@ -316,11 +320,14 @@ z-index: [number]; 定位层级<br>
 定位元素默认后者层级高于前者（不论是相对定位还是绝对定位）<br>
 <br>
 * 滤镜和遮罩弹窗<br>
+
 ```html
 <div class="mask"></div> //遮罩
 <div class="alert"></div> //弹窗
 ```
+
 <br>
+
 ```css
 body, html { //这里是为了兼容IE6。如果不给body和html加height: 100%的话，IE6下的蒙板只在最上面显示一条）
   height: 100%;
@@ -347,6 +354,7 @@ body, html { //这里是为了兼容IE6。如果不给body和html加height: 100%
   margin-left: -202px; //注意盒子的高度是404，而不是400.所以一般就是202px。此处一定要注意。
 }
 ```
+
 * 固定定位
 position: fixed 固定定位：与绝对定位的特性基本一致，差别是始终相对整个文档进行定位；<br>
 <br>
@@ -366,10 +374,12 @@ position: inherit; //从父元素继承定位属性的值<br>
 <br>
 在IE6下，父级的overflow: hidden; 是包不住子集的相对定位的。例如：<br>
 <br>
+
 ```css
 #box1 {width: 500px; height: 300px; background: blue; overflow: hidden;}
 #box2 {width: 300px; height: 500px; background: yellow; position: relative;}
 ```
+
 这两个盒子，子元素box2比父元素box1要长，虽然父级添加了overflow: hidden; 但是一旦子元素添加了position: relative; 在IE6下，子元素还是会撑破父元素。<br>
 <br>
 解决方法，在父级也加一个相对或绝对定位position: relative/absolute; 就可以包住子元素了。<br>
@@ -377,10 +387,12 @@ position: inherit; //从父元素继承定位属性的值<br>
 绝对定位的一些问题<br>
 <br>
 IE6下，定位元素的父级的宽高是奇数的话，那么该定位元素的right和bottom都有1像素的偏差。例如：<br>
+
 ```css
 #box1 {width: 300px; height: 300px; border: 1px solid black; position: relative;}
 #box2 {width: 50px; height: 50px; backgruond: #7c1; position: absolute; right: -1px; bottom: -1px;} 
 ```
+
 其中box2是box1的子元素。请仔细观察。当box1的宽高为300px的时候，box2会遮掉box1右下角的边框，这是正常的。但是当box1的宽高是301、303等奇数时，在IE6下，box2没有遮掉box1右下角的边框，这正是因为出现了1px的偏差。这个问题，没有好办法规避。<br>
 <br>
 position: absolute; 绝对定位的元素子级的浮动可以不用写清浮动方法<br>
@@ -391,6 +403,7 @@ position: fixed; 固定定位元素子级的浮动可以不用写清浮动方法
 <br>
 * 表格标签特性与默认样式重置
 一个完整的表格结构：
+
 ```html
 table
     thead
@@ -405,13 +418,14 @@ tfoot
     tr
         td …
 ```
+
 * table的默认样式重置
-<br>
 ```css
 th, td { padding: 0; }
 table {border-collapse: collapse; }
 /* table css reset */
 ```
+
 注意事项：<br>
 <br>
 1.不要给table, th, td以外的表格标签加样式<br>
@@ -448,17 +462,21 @@ hidden 隐藏<br>
 select标签配合option使用 下拉选框（默认显示第一项，也可以用selected指定默认选项）<br>
 textarea 文本域<br>
 label的用法（用for进行关联）：<br>
+
 ```html
 <input type="radio" name="gender" id="a" /><label for="a">男</label>
 <input type="radio" name="gender" id="b" /><label for="b">女</label>
 ```
+
 默认样式重置<br>
+
 ```css
 form {margin: 0;} //IE下form是有外边距的
 input {margin: 0; padding:0;}
 select {margin: 0;}
 textarea {margin: 0; padding: 0; resize: none; overflow: auto;}
 ```
+
 select元素支持宽度、高度支持并不完善。单选框、复选框对宽高的支持不完善<br>
 <br>
 可以用outline: none去掉表单元素的焦点线。<br>
@@ -469,6 +487,7 @@ select元素支持宽度、高度支持并不完善。单选框、复选框对�
 IE6下input背景滚动：<br>
 <br>
 文本框：当内容比框宽的时候，该文本框背景会被挤跑。解决方法：将该文本框用一个div包起来。在这个div上设置背景图片。然后把该文本框的宽高设置为与div相同；把文本框的边框去掉，文本框的背景设置为无。<br>
+
 ```html
 <div class="box">
     <input type="text name="" class="text" />
@@ -477,6 +496,7 @@ IE6下input背景滚动：<br>
 .text {width: 300px; height: 40px; border: 1px solid blue; background: url(sun.jpg) 0 center no-repeat #ffc;}
 */
  ```
+ 
 //以上这种仅针对input的样式设置，在IE6下，当输入的内容宽于文本框时，背景会跑掉。
 ```css
 .box {width: 300px; margin-top: 50px; height: 40px; border: 1px solid blue; background: url(sun.jpg) 0 center no-repeat #ffc;}
@@ -487,10 +507,12 @@ IE6下input背景滚动：<br>
 outline轮廓线：<br>
 <br>
 a标签轮廓线去除方法：<br>
+
 ```html
 <a href=”#” onfocus=”this.blur();”>…</a>
 <a href=”#” hidefocus>…</a>
 ```
+
 <br>
 ##### HTML和CSS进阶
 滑动门技术<br>
@@ -500,6 +522,7 @@ a标签轮廓线去除方法：<br>
 滑动门并不是一项全新的技术。它是利用背景图像的可层叠性，并允许他们在彼此之上进行滑动，以创造一些特殊的效果。<br>
 <br>
 左上和又上是圆角的按钮实现方式（按钮宽度可以随意变动）：<br>
+
 ```html
 <div class="btn">
     <div class="btnL">
@@ -507,27 +530,35 @@ a标签轮廓线去除方法：<br>
     </div>
 </div>
 ```
+
 <br>
+
 ```css
 .btn {width: 100px; background: url(img/btn.png) repeat-x;) //btn.png为中间的一像素平铺
 .btnL {background: url(img/btnL.png) no-repeat;} //btnL.png是带左角的那一部分
 .btnR {height: 31px; background: url(img/btnR.png) no-repeat right 0;} //btnR.png是带右角的那一部分
 ```
+
 以上方法比较麻烦；优化方法为（按钮宽度可以变动，但是不能宽于btn2.png的宽度）：<br>
 <br>
+
 ```html
 <div class="btn">
     <div class="btnR"></div>
 </div>
 ```
+
 <br>
+
 ```css
 .btn {width: 100px; background: url(img/btn2.png) no-repeat;} //btn2.png是左角部分外加中间部分
 .btnR {height: 31px; background: url(img/btnR.png) no-repeat right 0;} //btnR.png是右角的那一部分
 ```
+
 但是第二种方法没有第一种方法的扩展性好。第二种方法受到btn2.png这张图片宽度的限制。因此，对于扩展要求高、图片比较大的，尽量使用三层嵌套的方法。对扩展要求不高、图片比较小的，用两层嵌套。<br>
 <br>
 元素的宽度由内容撑开：<br>
+
 ```css
 display: inline;
 display: inline-block;
@@ -535,11 +566,13 @@ float
 position: absolute;
 position: fixed
 ```
+
 宽高可扩展的圆角的实现方式<br>
 <br>
 简单的方法：使用CSS3里面的border-radius<br>
 <br>
 利用滑动门的三层嵌套方法：<br>
+
 ```html
 <div class="box>
     <div class="boxHead">
@@ -557,7 +590,9 @@ position: fixed
     </div>
 </div>
 ```
+
 <br>
+
 ```css
 .box {width: 200px; margin: 30px auto;}
 .boxHead {background: url(boxH.png) repeat-x; height: 9px; overflow: hidden;}
@@ -568,9 +603,11 @@ position: fixed
 .boxFootR {background: url(boxFR.png) no-repeat right 0; height: 9px;}
 .boxC {border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5;}
 ```
+
 背景透明的圆角框实现<br>
 <br>
 首先在切图的时候，圆角的部分，就要切背景透明<br>
+
 ```html
 <div class="btn">
     <div class="btnL">
@@ -578,15 +615,19 @@ position: fixed
     </div>
 </div>
 ```
+
 <br>
+
 ```css
 .btn {width: 100px; margin: 0 auto; background: url(btn.gif) repeat-x;}
 .btnL {background: url(btnL.gif) no-repeat; position: relative; left: -9px;}
 .btnR {background: url(btnR.gif) no-repeat right 0; height: 25px; position: relative; right: -18px;} 
 ```
+
 <br>
 //注意，因为btnL设置了left: -9px; 导致btnR也向左移了9px，要让btnR比btn还要向右移除9px，就要设置一个相对右移的9*2=18像素才行<br>
 以上的写法有些麻烦，更为简便的方法是：<br>
+
 ```html
 <div class="btnL">
     <div class="btnR">
@@ -595,7 +636,9 @@ position: fixed
 </div>
 <!-- 注意这种写法与上面的那种方法，标签嵌套的顺序变了 -->
 ```
+
 <br>
+
 ```css
 .btnL {width: 100px; margin: 0 auto; background: url(btnL.gif) no-repeat;}
 .btnR {background: url(btnR.gif) no-repeat right 0;}
@@ -678,6 +721,7 @@ CSs精灵的缺点<br>
 <![end if]-->
 ```
 条件注释语句还有以下几种写法：<br>
+
 ```html
 <!--[if IE 9]>
 这是IE9
@@ -708,9 +752,11 @@ _ 下划线是IE6以及IE6之前的IE浏览器解析<br>
 针对chrome的css hack：@media screen and (-webkit-min-device-pixel-ratio: 0) {}<br>
 <br>
 用css hack解决IE6的png问题（原生的CSS办法，没法设置背景图片大小，也没法平铺）：<br>
+
 ```css
 .box {width: 400px; height: 400px; background:url(img/png.png); _background: none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/png.png", sizingMethod="crop");
 ```
+
 样式优先级、提升样式优先级<br>
 
 默认 < 类型 < class< id < style (行间) < js<br>
@@ -722,18 +768,22 @@ _ 下划线是IE6以及IE6之前的IE浏览器解析<br>
 圣杯布局（双飞翼布局）<br>
 <br>
 左右宽度固定，中间宽度自适应伸缩，并且中间先加载<br>
+
 ```html
 <div class="center"></div>
 <div class="left"></div>
 <div class="right"></div>
 ```
+
 <br>
+
 ```css
 body {margin: 0}
 .center {height: 600px; background: #f60; margin: 0 200px;}
 .left {width: 200px; background: #fc0; height: 600px; position: absolute; left: 0; top: 0}
 .right {width: 200px; background: #fcc; height: 600px;position: absolute; left: 0; top: 0}
 ```
+
 等高布局<br>
 ```html
 <div class="wrap">
@@ -741,13 +791,16 @@ body {margin: 0}
     <div class="right"></div>
 </div>
 ```
+
 <br>
+
 ```css
 body {margin: 0}
 .wrap {width: 900px; margin: 0 auto; overflow: hidden;}
 .left {width: 200px; background: red; float: left; padding-bottom: 10000px; margin-bottom: -10000px;}
 .right {width: 700px; background: blue; float: right; padding-bottom: 10000px; margin-bottom: -10000px;}
 ```
+
 IE6下使用margin负值的为题<br>
 <br>
 在IE6下使用margin负值，超出边界的部分会被截掉。解决方法是为这些元素添加相对定位即可。<br>
@@ -849,13 +902,16 @@ IE6不支持固定定位。那么在IE下用绝对定位模拟固定定位的第
     <div class="div"></div>
 </div>
 ```
+
 <br>
+
 ```css
 html {height: 100%; overflow: hidden;}
 body {margin: 0; height: 100%; overflow: auto;}
 .box {height: 2000px;}
 .div {width: 100px; height: 100px; background: red; position: absolute; left: 100px; top: 100px;}
 ```
+
 上述代码中，绝对定位的.div是根据html的父级也就是document来定位的。原本滚动条是在document上的。但是html设置了`overflow: hidden;`，因此就把document上的滚动条hidden掉了；然后在body上加了`overflow: auto; `滚动条跑到了body身上。因此滚动滚动条的时候，滚动的是body，document的位置不变，因此依据document进行绝对定位的`.div`看起来就好像是固定定位的效果。<br>
 <br>
 以上方法也是存在问题的。<br>
@@ -866,25 +922,33 @@ body {margin: 0; height: 100%; overflow: auto;}
     <div class="div"></div>
 </div>
 ```
+
 <br>
+
 ```css
 .box {height: 2000px;}
 .div {width: 100px; height: 100px; background: red; position: fixed; left: 100px; top: 100px; _position: absolute; _top: expression(eval(document.documentElement.scrollTop+100));}
 ```
+
 <br>
+
 * 未知宽高的img如何在容器里水平、垂直居中
 第一种方法：<br>
+
 ```html
 <div class="box">
     <img src="bigptr.jpg /><span></span>
 </div>
 ```
+
 <br>
+
 ```css
 .box {width: 800px; height: 600px; border: 2px solid #000; text-align: center;}
 span {display: inline-block; height: 100%; vertical-align: middle;}
 img {vertical-align: middle;}
 ```
+
 第二种方法：<br>
 ```html
 <div class="box">
@@ -892,10 +956,12 @@ img {vertical-align: middle;}
 </div>
     ```
 不考虑兼容的话，可以使用：<br>
+
 ```css
 .box {width: 800px; height: 600px; border: 2px solid #000; display: table;}
 span {display: table-cell; text-align: center; vertical-align: middle;}
 ```
+
 考虑IE6、7兼容，则要写成：<br>
 ```css
 .box {width: 800px; height: 600px; border: 2px solid #000; display: table; position: relative; overflow: hidden;}
@@ -926,13 +992,16 @@ li的里面分为左右两块元素，右边元素一直跟在左侧内容后边
     </li>
 </ul>
 ```
+
 <br>
+
 ```css
 .list {width: 300pxp; margin: 0; padding: 0; list-style: none;}
 li {height: 30px; font-size: 12px; line-height: 30px; border: 1px solid #000; overflow: hidden;vertical-align: top;}
 span {padding: 10px;width: 40px; position: absolute; right: 0; top: 0;}
 p {margin: 0; float: left; padding-right: 50px; position: relative;}
 ```
+
 #### 整站规划
 <br>
 网站内文件夹的路径要固定<br>
@@ -958,6 +1027,7 @@ css代码，写包含样式的时候，能找到这个元素并且不影响其�
 * 样式重置
 方法一（代码简化、开发麻烦）：遇到一个标签，就重置一个标签的样式<br>
 方法二：直接复制其他网站的样式重置（有些标签没用到，有些标签不符合自己的项目需求），这需要在其它网站的重置样式表上进行调整。<br>
+
 ```css
 body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select {margin: 0; padding: 0;}
 em {font-style: normal;}
@@ -967,6 +1037,7 @@ img {border: none; vertical-align: top;}
 table {border-collapse: collapse;}
 textarea {resize: none; overflow: auto;}
 ```
+
 页面宽度指的是页面内容的宽度，而不是设计图的宽度<br>
 最好不要把所有内容放在一个div里面，最好分开来写<br>
 最好不要写成：<br>
