@@ -320,6 +320,7 @@ z-index: [number]; 定位层级<br>
 <div class="mask"></div> //遮罩
 <div class="alert"></div> //弹窗
 ```
+<br>
 ```css
 body, html { //这里是为了兼容IE6。如果不给body和html加height: 100%的话，IE6下的蒙板只在最上面显示一条）
   height: 100%;
@@ -506,6 +507,7 @@ a标签轮廓线去除方法：<br>
     </div>
 </div>
 ```
+<br>
 ```css
 .btn {width: 100px; background: url(img/btn.png) repeat-x;) //btn.png为中间的一像素平铺
 .btnL {background: url(img/btnL.png) no-repeat;} //btnL.png是带左角的那一部分
@@ -518,6 +520,7 @@ a标签轮廓线去除方法：<br>
     <div class="btnR"></div>
 </div>
 ```
+<br>
 ```css
 .btn {width: 100px; background: url(img/btn2.png) no-repeat;} //btn2.png是左角部分外加中间部分
 .btnR {height: 31px; background: url(img/btnR.png) no-repeat right 0;} //btnR.png是右角的那一部分
@@ -554,6 +557,7 @@ position: fixed
     </div>
 </div>
 ```
+<br>
 ```css
 .box {width: 200px; margin: 30px auto;}
 .boxHead {background: url(boxH.png) repeat-x; height: 9px; overflow: hidden;}
@@ -574,6 +578,7 @@ position: fixed
     </div>
 </div>
 ```
+<br>
 ```css
 .btn {width: 100px; margin: 0 auto; background: url(btn.gif) repeat-x;}
 .btnL {background: url(btnL.gif) no-repeat; position: relative; left: -9px;}
@@ -590,6 +595,7 @@ position: fixed
 </div>
 <!-- 注意这种写法与上面的那种方法，标签嵌套的顺序变了 -->
 ```
+<br>
 ```css
 .btnL {width: 100px; margin: 0 auto; background: url(btnL.gif) no-repeat;}
 .btnR {background: url(btnR.gif) no-repeat right 0;}
@@ -721,6 +727,7 @@ _ 下划线是IE6以及IE6之前的IE浏览器解析<br>
 <div class="left"></div>
 <div class="right"></div>
 ```
+<br>
 ```css
 body {margin: 0}
 .center {height: 600px; background: #f60; margin: 0 200px;}
@@ -734,6 +741,7 @@ body {margin: 0}
     <div class="right"></div>
 </div>
 ```
+<br>
 ```css
 body {margin: 0}
 .wrap {width: 900px; margin: 0 auto; overflow: hidden;}
@@ -841,6 +849,7 @@ IE6不支持固定定位。那么在IE下用绝对定位模拟固定定位的第
     <div class="div"></div>
 </div>
 ```
+<br>
 ```css
 html {height: 100%; overflow: hidden;}
 body {margin: 0; height: 100%; overflow: auto;}
@@ -857,6 +866,7 @@ body {margin: 0; height: 100%; overflow: auto;}
     <div class="div"></div>
 </div>
 ```
+<br>
 ```css
 .box {height: 2000px;}
 .div {width: 100px; height: 100px; background: red; position: fixed; left: 100px; top: 100px; _position: absolute; _top: expression(eval(document.documentElement.scrollTop+100));}
@@ -869,6 +879,7 @@ body {margin: 0; height: 100%; overflow: auto;}
     <img src="bigptr.jpg /><span></span>
 </div>
 ```
+<br>
 ```css
 .box {width: 800px; height: 600px; border: 2px solid #000; text-align: center;}
 span {display: inline-block; height: 100%; vertical-align: middle;}
@@ -915,6 +926,7 @@ li的里面分为左右两块元素，右边元素一直跟在左侧内容后边
     </li>
 </ul>
 ```
+<br>
 ```css
 .list {width: 300pxp; margin: 0; padding: 0; list-style: none;}
 li {height: 30px; font-size: 12px; line-height: 30px; border: 1px solid #000; overflow: hidden;vertical-align: top;}
