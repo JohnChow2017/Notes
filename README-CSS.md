@@ -127,13 +127,13 @@ IE6不支持a以外其他任何标签的伪类<br>
 IE6以上的浏览器支持标签的hover伪类<br>
 
 * 标签默认值样式重置
-``html
+```html
 /* 默认样式重置（css reset） */
 body, div, p, h1, h2, h3, h4, h5, h6, dl, dd { margin: 0; font-size: 12px; /* font-family */ }
 ol, ul { list-style: none; padding: 0; margin: 0; }
 a { text-decoration: none; }
 img { border: none; }
-``
+```
 <br>
 
 * 标签基本特性和转换:
