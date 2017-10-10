@@ -61,4 +61,10 @@ W3C的元素宽度=content的宽度<br>
 >content-box  ：  width=content+padding+border<br>
 >border-box：     width=width（样式指定的宽度）<br>
 
-IE的元素宽度=content+padding+border<br>
+IE的元素宽度=content+padding+border<br><br>
+
+10.每个小方块设置padding：30% 0 0 0<br>
+是因为矩形本身没有设置高度，矩形的高度是靠padding撑起来的<br>
+而不管是padding还是margin取百分比的时候都是以父元素的width为参照物<br>
+所以利用padding撑起告诉可以完成高度自适应<br>
+而又因为浏览器的默认高度是无限长的 所以高度没法通过百分比完成自适应<br>
