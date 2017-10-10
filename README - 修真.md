@@ -18,7 +18,9 @@ XHTML是严格的、纯净的HTML。<br><br>
 （1）所有标记元素都要正确的嵌套，不能交叉嵌套。<br>
 （2）所有的标记都必须小写。<br>
 （3）所有的标记都必须关闭。<br>
-双边标记：<span></span><br>
+双边标记：```html
+<span></span>```
+<br>
 单边标记：<br> 转成 <br /> <hr> 转成 <hr />还有<img src=“URL” /><br>
 （4）所有的属性值必须加引号。<font color="red"></font><br>
 （5）所有的属性必须有值。<hr noshade="noshade">、<input type="radio" checked="checked" /><br>
