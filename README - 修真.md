@@ -58,6 +58,7 @@ user-scalable：用户是否可以手动缩放。<br><br>
 9.盒子模型的理解<br>
 W3C的元素宽度=content的宽度<br>
 包含两个属性content-box 和 border-box。
->content-box  ：  width=content+padding+border
->border-box：     width=width（样式指定的宽度）
+>content-box  ：  width=content+padding+border<br>
+>border-box：     width=width（样式指定的宽度）<br>
+
 IE的元素宽度=content+padding+border<br>
