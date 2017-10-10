@@ -1,74 +1,55 @@
-# miaov-JS初级
-## Demo
-热身运动-设置div样式 
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/热身运动-设置div样式.html) [【代码】](https://github.com/JohnChow2017/miaov-JS/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E7%83%AD%E8%BA%AB%E8%BF%90%E5%8A%A8-%E8%AE%BE%E7%BD%AEdiv%E6%A0%B7%E5%BC%8F.html)<br>
+## task01九宫格
+1.文档声明头 此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范<br>
+<!DOCTYPE> 声明不是 HTML 标签；它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。<br>
+DOCTYPE标签是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（DTD）来解析文档。<br><br>
 
-1.图片切换
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/图片切换.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E5%9B%BE%E7%89%87%E5%88%87%E6%8D%A2.html)<br>
+在 HTML 4.01 中，<!DOCTYPE> 声明引用 DTD，因为 HTML 4.01 基于 SGML。DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。<br>
+HTML5 不基于 SGML，所以不需要引用 DTD。<br>
+提示：请始终向 HTML 文档添加 <!DOCTYPE> 声明，这样浏览器才能获知文档类型。<br><br>
 
-2.图片切换2
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/图片切换2.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E5%9B%BE%E7%89%87%E5%88%87%E6%8D%A22.html)<br>
+2.XHTML介绍：<br>
+XHTML：Extensible Hypertext Markup Language，可扩展超文本标注语言。<br>
+XHTML的主要目的是为了取代HTML，也可以理解为HTML的升级版。<br>
+HTML的标记书写很不规范，会造成其它的设备(ipad、手机、电视等)无法正常显示。<br>
+XHTML与HTML4.0的标记基本上一样。<br>
+XHTML是严格的、纯净的HTML。<br><br>
 
-3.图片切换3
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/图片切换3.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E5%9B%BE%E7%89%87%E5%88%87%E6%8D%A23.html)<br>
+编写XHTML的规范：<br>
+（1）所有标记元素都要正确的嵌套，不能交叉嵌套。<br>
+（2）所有的标记都必须小写。<br>
+（3）所有的标记都必须关闭。<br>
+双边标记：<span></span><br>
+单边标记：<br> 转成 <br /> <hr> 转成 <hr />还有<img src=“URL” /><br>
+（4）所有的属性值必须加引号。<font color="red"></font><br>
+（5）所有的属性必须有值。<hr noshade="noshade">、<input type="radio" checked="checked" /><br>
+（6）XHTML文档开头必须要有DTD文档类型定义<br><br>
 
-4.建立索引值-图片切换
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/建立索引值-图片切换.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E5%BB%BA%E7%AB%8B%E7%B4%A2%E5%BC%95%E5%80%BC-%E5%9B%BE%E7%89%87%E5%88%87%E6%8D%A2.html)<br>
+3.http：超文本传协议。用来规定客户端浏览器和服务端交互时数据的一个格式。SMTP 邮件传输协议，ftp:文件传输协议。<br><br>
 
-5.（作业）图片切换
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/（作业）图片切换.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89%E5%9B%BE%E7%89%87%E5%88%87%E6%8D%A2.html)<br>
+4.<meta http-equiv="refresh" content="3;http://www.baidu.com"><br>
+上面这个标签的意思是说，3秒之后，自动跳转到百度页面。<br><br>
 
-6.（作业）图片切换-带缩略图
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/（作业）图片切换-带缩略图.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89%E5%9B%BE%E7%89%87%E5%88%87%E6%8D%A2-%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE.html)<br>
+5.字符集 charset<br>
+UTF-8：字多，有各种国家的语言，但是保存尺寸大，文件臃肿；<br>
+gb2312：字少，只用中文和少数外语和符号，但是尺寸小，文件小巧。<br><br>
 
-7.（作业）自定义属性应用-仿qq
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/（作业）自定义属性应用-仿qq.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E5%BA%94%E7%94%A8-%E4%BB%BFqq.html)<br>
+6.SEO<br>
+<meta name="Description" content="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。" /><br>
+只要设置的Description页面描述，那么百度搜索结果，就能够显示这些语句，这个技术叫做SEO（search engine optimization，搜索引擎优化）。<br>
+<meta name="Keywords" content="网易,邮箱,游戏,新闻,体育,娱乐,女性,亚运,论坛,短信" /><br>
+这些关键词，就是告诉搜索引擎，这个网页是干嘛的，能够提高搜索命中率。让别人能够找到你，搜索到你。<br><br>
 
-8.（作业）仿微信聊天
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/（作业）仿微信聊天.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89%E4%BB%BF%E5%BE%AE%E4%BF%A1%E8%81%8A%E5%A4%A9.html)<br>
+7.面试题：<br><br>
 
-9.[]的使用
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/[]的使用.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%5B%5D%E7%9A%84%E4%BD%BF%E7%94%A8.html)<br>
+问：网页的head标签里面，表示的是页面的配置，有什么配置？<br>
+答：字符集、关键词、页面描述、页面标题。（今后我们还能看见一些其他的配置：IE适配、视口、iPhone小图标等等）<br><br>
 
-10.模拟对话
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/模拟对话.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E6%A8%A1%E6%8B%9F%E5%AF%B9%E8%AF%9D.html)<br>
-
-11.通关口令
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/通关口令.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E9%80%9A%E5%85%B3%E5%8F%A3%E4%BB%A4.html)<br>
-
-12.自定义属性-建立索引值
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/自定义属性-建立索引值.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7-%E5%BB%BA%E7%AB%8B%E7%B4%A2%E5%BC%95%E5%80%BC.html)<br>
-
-13.自定义属性应用-按钮的value变化
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/自定义属性应用-按钮的value变化.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E5%BA%94%E7%94%A8-%E6%8C%89%E9%92%AE%E7%9A%84value%E5%8F%98%E5%8C%96.html)<br>
-
-14.自定义属性应用-仿qq
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/自定义属性应用-仿qq.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E5%BA%94%E7%94%A8-%E4%BB%BFqq.html)<br>
-
-15.自定义属性-自定义一组开关应用
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/自定义属性-自定义一组开关应用.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E7%BB%84%E5%BC%80%E5%85%B3%E5%BA%94%E7%94%A8.html)<br>
-
-16.自动生成10个Li
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/自动生成10个Li.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%9010%E4%B8%AALi.html)<br>
-
-17.自动生成100个Li
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/自动生成100个Li.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90100%E4%B8%AALi.html)<br>
-
-18.自动生成V字形（提高版）未完成
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/自动生成V字形（提高版）未完成.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90V%E5%AD%97%E5%BD%A2%EF%BC%88%E6%8F%90%E9%AB%98%E7%89%88%EF%BC%89%E6%9C%AA%E5%AE%8C%E6%88%90.html)<br>
-
-19.自动生成V字形
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/自动生成V字形.html) [【代码】](https://github.com/JohnChow2017/Demo/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90V%E5%AD%97%E5%BD%A2.html)<br>
-
-20.（作业）找到合适的值-数据类型
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/（作业）找到合适的值-数据类型.html) [【代码】](https://github.com/JohnChow2017/miaov-JS/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89%E6%89%BE%E5%88%B0%E5%90%88%E9%80%82%E7%9A%84%E5%80%BC-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.html)<br>
-
-21.（作业）qq号码-数据类型
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/（作业）qq号码-数据类型.html) [【代码】](https://github.com/JohnChow2017/miaov-JS/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89qq%E5%8F%B7%E7%A0%81-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.html)<br>
-
-22.（作业）商品价格-函数传参
-[【在线预览】](https://johnchow2017.github.io/Demo/miaov-JS初级/（作业）商品价格-函数传参.html) [【代码】](https://github.com/JohnChow2017/miaov-JS/blob/master/miaov-JS%E5%88%9D%E7%BA%A7/%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89%E5%95%86%E5%93%81%E4%BB%B7%E6%A0%BC-%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82.html)<br>
-
-
-## NOTES
-####
+8.viewport<br>
+一个常用的针对移动网页优化过的页面的 viewport meta 标签大致如下：<br>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+width：控制 viewport 的大小，可以指定的一个值，如 600，或者特殊的值，如 device-width 为设备的宽度（单位为缩放为 100% 时的 CSS 的像素）。<br>
+height：和 width 相对应，指定高度。<br>
+initial-scale：初始缩放比例，也即是当页面第一次 load 的时候缩放比例。<br>
+maximum-scale：允许用户缩放到的最大比例。<br>
+minimum-scale：允许用户缩放到的最小比例。<br>
+user-scalable：用户是否可以手动缩放。<br>
