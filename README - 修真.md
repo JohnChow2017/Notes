@@ -53,4 +53,11 @@ height：和 width 相对应，指定高度。<br>
 initial-scale：初始缩放比例，也即是当页面第一次 load 的时候缩放比例。<br>
 maximum-scale：允许用户缩放到的最大比例。<br>
 minimum-scale：允许用户缩放到的最小比例。<br>
-user-scalable：用户是否可以手动缩放。<br>
+user-scalable：用户是否可以手动缩放。<br><br>
+
+9.盒子模型的理解<br>
+W3C的元素宽度=content的宽度<br>
+包含两个属性content-box 和 border-box。
+>content-box  ：  width=content+padding+border
+>border-box：     width=width（样式指定的宽度）
+IE的元素宽度=content+padding+border<br>
